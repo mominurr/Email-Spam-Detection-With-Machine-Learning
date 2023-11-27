@@ -29,7 +29,7 @@ The script `spam-email-calssifier.py` performs the following tasks:
 **Model Use**: After training, this model is used for prediction. For prediction, run `app.py` file.
 
 ## Video Representation
-Check out the video representation of the project for a more interactive and engaging overview: [Email Spam detection Video](https://youtu.be/4Fk8Sjj6dc4)
+Check out the video representation of the project for a more interactive and engaging overview: [Email Spam detection Video](https://youtu.be/Ac6sMdDDBBU)
 
 ## Requirements
 Ensure you have the following libraries installed to run the script:
