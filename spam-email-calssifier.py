@@ -150,7 +150,7 @@ def mail_spam_detection():
     joblib.dump(MODEL, 'spam_detection_model.pkl')
 
     # Save the vectorizer
-    joblib.dump(count_vectorizer, 'count_vectorizer.pkl')
+    joblib.dump(count_vectorizer, 'vectorizer.pkl')
 
 
 
