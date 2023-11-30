@@ -39,10 +39,11 @@ Ensure you have the following libraries installed to run the script:
 - seaborn
 - matplotlib
 - scikit-learn
+- flask
 
 Install the required libraries using:
 
-    pip install pandas joblib seaborn matplotlib scikit-learn
+    pip install pandas joblib seaborn matplotlib scikit-learn flask
 or
 
     pip install -r requirements.txt
