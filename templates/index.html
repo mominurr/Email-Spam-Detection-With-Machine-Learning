@@ -1,4 +1,3 @@
-<!-- templates/index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,24 +36,41 @@
 <body>
     <div class="container">
         <h1>Email Spam Detection</h1>
-        <form action="/predict" method="post">
+        <form action="/predict" method="post" id="emailForm">
             <div class="form-group">
                 <label for="email_text">Enter Email Text:</label>
-                <textarea class="form-control" id="email_text" name="email_text" rows="4" required></textarea>
+                <textarea class="form-control" id="email_text" name="email_text" rows="4" required>{{ request.form.get('email_text', '') }}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Predict</button>
+            <button type="button" class="btn btn-secondary" id="clearButton">Clear Text</button>
         </form>
 
-        {% if result %}
-        <div class="result">
+        <div class="result" id="predictionResult">
+            {% if result %}
             <p style="font-size: 18px;"><strong>Prediction Result: </strong>{{ result }}</p>
+            {% endif %}
         </div>
-        {% endif %}
     </div>
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Clear Text and Prediction Result Function -->
+    <script>
+        // Clear Text button event listener
+        document.getElementById('clearButton').addEventListener('click', function() {
+            // Clear the email textarea
+            document.getElementById('email_text').value = '';
+            // Clear the prediction result
+            document.getElementById('predictionResult').innerHTML = '';
+        });
+
+        // Prevent form from clearing the textarea after submitting
+        document.getElementById('emailForm').addEventListener('submit', function(event) {
+            // Do not prevent default submission behavior here
+        });
+    </script>
 </body>
 </html>
