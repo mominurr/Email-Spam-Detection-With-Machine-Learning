@@ -15,7 +15,7 @@ This project aims to build a spam detection model using machine learning. The da
 - Visualized the confusion matrix, classification report, and model accuracy.
 
 ## Script Details
-The script `spam-email-calssifier.py` performs the following tasks:
+The script `Email_Spam_Detection_ML.ipynb` performs the following tasks:
 1. Imports necessary libraries.
 2. Loads and analyzes the dataset.
 3. Preprocesses the data, including dropping unnecessary columns, renaming columns, handling missing values, and removing duplicates.
@@ -26,10 +26,12 @@ The script `spam-email-calssifier.py` performs the following tasks:
 
 
 
-**Model Use**: After training, this model is used for prediction. For prediction, run `app.py` file.
+**Model Use**: After training, this model is used for prediction.
 
-## Video Representation
-Check out the video representation of the project for a more interactive and engaging overview: [Email Spam detection Video](https://youtu.be/Ac6sMdDDBBU)
+## Live Project
+The application is hosted live on Streamlit, making it easily accessible for users to input email text and get real-time predictions.
+
+**The live project can be accessed at the following URL:** [Live Web App - Email Spam Detection](https://email-spam-detections.streamlit.app)
 
 ## Requirements
 Ensure you have the following libraries installed to run the script:
@@ -40,22 +42,20 @@ Ensure you have the following libraries installed to run the script:
 - matplotlib
 - scikit-learn
 - flask
+- streamlit
 
 Install the required libraries using:
 
-    pip install pandas joblib seaborn matplotlib scikit-learn flask
-or
-
     pip install -r requirements.txt
     
-## Usage
+## Usage(In your local machine)
 To use this project, follow these steps:
 1. Ensure you have Python installed on your machine.
 2. **For Training:**
    - Clone the repository: `git clone https://github.com/mominurr/Email-Spam-Detection-With-Machine-Learning.git`
    - Install the required libraries: `pip install -r requirements.txt`
-3. **For Prediction:**
-   - Run the script: `python app.py`
+3. **For Prediction via Flask:**
+   - Run the script: `python flax_app.py`
 
 ## Conclusion
 This spam detection project successfully builds and visualizes a machine learning model for identifying spam messages. The Multinomial Naive Bayes classifier demonstrates effective performance, with insights provided by visualizations such as the distribution of spam and ham emails and the confusion matrix. The trained model and CountVectorizer are saved for future use. The project serves as a foundation for spam detection tasks, and contributions or extensions are welcome. Thank you for exploring this spam detection project!
